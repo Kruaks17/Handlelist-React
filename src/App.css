@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+@import url("https://use.typekit.net/wuf7ncy.css");
+
+*{
+    
+    background-color:#C9C5BA;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  
 }
+h1{
+    font-family: 'halyard-display', sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+
+    
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1:hover{
+    animation-name: overskrift;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
+@keyframes overskrift{
 
-.App-link {
-  color: #61dafb;
+    from {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      30% {
+        transform: scale3d(1.25, 0.75, 1);
+      }
+    
+      40% {
+        transform: scale3d(0.75, 1.25, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.15, 0.85, 1);
+      }
+    
+      65% {
+        transform: scale3d(0.95, 1.05, 1);
+      }
+    
+      75% {
+        transform: scale3d(1.05, 0.95, 1);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+ }
+
+ul {
+    font-family: 'halyard-display', sans-serif;
+    list-style: none;
+    
+   
+
 }
+form {
+    font-family: 'halyard-display', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+input.todo-input {
+    font-family: 'halyard-display', sans-serif;
+    font-size: 1rem;
+    
+    border: none;
+    
+    background-color: transparent;
+    border-bottom: black solid 2px;
+
+}
+@media screen and (max-width:500px){
+
+    input{
+        font-size: 1rem;
+        width: 40vw;
+    }
+    input::placeholder{
+        font-size: 1rem;
+    }
+    select{
+        font-size: 1rem;
+        width: 100%;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .todo-item {
+        font-size: 1rem;
+        
+    }
+
+}
+input::placeholder{
+    font-family: 'halyard-display', sans-serif;
+    font-size: 1rem;
+    
+}
+button{
+    font-family: 'halyard-display', sans-serif;
+    border: none;
+}
+.todo-item {
+    
+    font-size: 1.5rem;
+    background-color: transparent;
+    
+    width: 35vw;
+    
+}
+.todo-list{
+    
+    width: 50vw;
+    margin: auto;
+
+    
+}
+select{
+    font-family: 'halyard-display', sans-serif;
+    padding: 1px;
+
+    border: black solid 2px;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    width: 100%;
+
+}
+.todo{
+
+    font-family: 'halyard-display', sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+button{
+    cursor: pointer;
 }
